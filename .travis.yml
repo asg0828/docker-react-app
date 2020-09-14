@@ -12,9 +12,6 @@ before_install:
 script:
     - docker run -e CI=true asg0828/docker-react-app npm run test -- --coverage
 
-after_success:
-    - ehco "Test Success"
-
 deploy:
     provider: elasticbeanstalk
     region: "us-east-2"
